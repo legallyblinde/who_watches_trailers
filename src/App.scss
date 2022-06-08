@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.App{
+    background-color: rgb(14, 16, 26);
+    min-height: 100vh ;
+    width: 100vw ;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .hero{
+        height: 50vh;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+
+        .hero_texts{
+            font-family: 'Montserrat', sans-serif;
+            position: absolute;
+            bottom: 0;
+            padding: 1rem;
+            z-index: 1;
+            filter: invert(100%);
+            background: linear-gradient(rgba(255, 255, 255, 0), white);
+
+            h1{
+                padding-left: 1rem;
+                font-size: 2.3rem;
+                margin-bottom: -1rem;
+            }
+
+            p{
+                width: 75%;
+                padding-left: 1rem;
+                font-weight: bolder;
+            }
+        }
+
+        .hero_backdrop{
+            height: 50vh;
+            width: 100vw;
+
+            img{
+                height: 100%;
+                width: 100vw;
+                object-fit: cover;
+            }
+        }
+
+        &:hover .button1{
+            opacity: 1;
+        }
+
+        .button1{
+            opacity: 0;
+            font-size: 3rem;
+            font-family: 'Bebas Neue', cursive;
+            color: white;
+            cursor: pointer;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background: rgba(255, 213, 213, 0);
+            border: none;
+            border-radius: 50%;
+            height: 5rem;
+            width: 5rem;
+            z-index: 1;
+            transition: all 200ms ease;
+
+            &:hover{
+                color: rgb(255, 255, 255);
+                text-shadow: 3px 3px rgb(255, 0, 0);
+            }
+
+            svg{
+                height: 100%;
+                width: 100%;
+                color: white;
+            }
+        }
+
+        .button2{
+            z-index: 3;
+            cursor: pointer;
+            font-size: 3rem;
+            color: white;
+            font-family: 'Bebas Neue', cursive;
+            position: absolute;
+            right: 3%;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 213, 213, 0);
+            border: none;
+            border-radius: 50%;
+            height: 5rem;
+            width: 5rem;
+            opacity: 65%;
+            
+            &:hover{
+                color: rgb(255, 255, 255);
+                text-shadow: 2px 2px rgb(255, 0, 0);
+            }
+        }
+
+        .youtube_container{
+            opacity: 100%;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+    }
+
+    .header{
+        height: 8vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 5rem;
+        
+        h1{
+            cursor: pointer;
+            color: white;
+            margin-left: 5rem;
+        }
+     form{
+
+        input{
+            background-color: rgba(137, 172, 125, 0.287);
+            color: rgb(232, 253, 236);
+            padding: 0.5rem 0.5rem;
+            border: 0;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, 0.254);
+            outline: 0;
+            transition: all 200ms ease;
+            margin: 0.5rem;
+
+            &:focus{
+                border: 0;
+                border-radius: 5px;
+                box-shadow: inset 2px 2px 5px -2px rgba(0, 0, 0, 0.254);
+            }
+
+            &::placeholder{
+                color: rgba(232, 255, 248, 0.377);
+            }
+        }
+
+        button{
+            cursor: pointer;
+            height: 2.5rem;
+            width: 2.5rem;
+            background: rgba(73, 73, 73, 0.314);
+            border: 0;
+            padding: 0;
+            border-radius: 50%;
+            margin-bottom: -1rem;
+
+            svg{
+                height: 1.5rem;
+                width: 1.5rem;
+                color: aliceblue;
+            }
+        }
+    }
+    }
+}
+.movie_list{
+    overflow-x: hidden;
+    min-height: 100vh;
+    width: 100vw;
+    
+    @media (min-width: 375px){
+        display: grid;
+        padding-left: 5rem;
+    }
+    @media (min-width: 768px){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+        padding-left: 5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    @media (min-width: 960px){
+        padding-top: 2rem;
+        padding-left: 0;
+        width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1200px){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    
+}

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/who_watches_trailers/static/css/main.23fbcfec.css",
+    "main.js": "/who_watches_trailers/static/js/main.bf1eae7f.js",
+    "static/js/787.09345b20.chunk.js": "/who_watches_trailers/static/js/787.09345b20.chunk.js",
+    "index.html": "/who_watches_trailers/index.html",
+    "main.23fbcfec.css.map": "/who_watches_trailers/static/css/main.23fbcfec.css.map",
+    "main.bf1eae7f.js.map": "/who_watches_trailers/static/js/main.bf1eae7f.js.map",
+    "787.09345b20.chunk.js.map": "/who_watches_trailers/static/js/787.09345b20.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23fbcfec.css",
+    "static/js/main.bf1eae7f.js"
+  ]
+}
